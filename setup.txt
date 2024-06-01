@@ -1,0 +1,13 @@
+REACT
+- npm i
+- npm i --save styled-components
+- npm install --save-dev @types/styled-components
+
+REDUX
+- npm i --save react-redux @reduxjs/toolkit
+
+ROUTE
+- npm i --save react-router-dom
+
+
+- npm start
