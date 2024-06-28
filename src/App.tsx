@@ -1,5 +1,10 @@
-import { useState } from "react"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { useEffect, useState } from "react"
+import {
+  createBrowserRouter,
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
 import { EstiloGlobal, Container } from "./styles/global"
 import { ThemeProvider } from "styled-components"
 import temaLight from "./themes/light"
@@ -10,7 +15,11 @@ import Projetos from "./pages/Projetos"
 import Cabecalho from "./containers/Cabecalho"
 
 function App() {
-  const [trocaTema, setTrocaTema] = useState(true)
+  const [trocaTema, setTrocaTema] = useState(() => {
+    const temaSalvo = localStorage.getItem("tema")
+    return temaSalvo ? JSON.parse(temaSalvo) : true
+  })
+
   const rotas = createBrowserRouter([
     {
       path: "/",
@@ -27,16 +36,31 @@ function App() {
   ])
 
   function funcTrocaTema() {
-    setTrocaTema(!trocaTema)
+    setTrocaTema((prevTema: unknown) => {
+      const novoTema = !prevTema
+      localStorage.setItem("tema", JSON.stringify(novoTema))
+      return novoTema
+    })
   }
+
+  useEffect(() => {
+    const temaSalvo = localStorage.getItem("tema")
+    if (temaSalvo) {
+      setTrocaTema(JSON.parse(temaSalvo))
+    }
+  }, [])
 
   return (
     <ThemeProvider theme={trocaTema ? temaDark : temaLight}>
       <EstiloGlobal />
-      <Cabecalho trocaTema={funcTrocaTema} tema={trocaTema} />
-      <Container>
-        <RouterProvider router={rotas} />
-      </Container>
+      <Router>
+        <Cabecalho trocaTema={funcTrocaTema} tema={trocaTema} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/projetos" element={<Projetos />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   )
 }
