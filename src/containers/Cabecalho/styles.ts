@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { Container } from "../../styles/global"
-import { Link } from "react-router-dom"
+import styled from 'styled-components'
+import { breakpoints, Container } from '../../styles/global'
+import { Link } from 'react-router-dom'
 
 type propStyle = {
   ativo?: boolean
@@ -32,7 +32,7 @@ export const Header = styled.div`
       gap: 8px;
     }
 
-    @media (width <= 767px) {
+    @media (width < ${breakpoints.tablet}) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -44,14 +44,14 @@ export const Titulo = styled.h1`
   width: auto;
   color: ${(props) => props.theme.corPrincipal};
 
-  @media (width <= 767px) {
+  @media (width < ${breakpoints.tablet}) {
     display: none;
   }
 `
 
 export const BotaoPagina = styled(Link)<propStyle>`
   background-color: ${(propStyle) =>
-    propStyle.ativo ? (props) => props.theme.corPrincipal : "transparent"};
+    propStyle.ativo ? (props) => props.theme.corPrincipal : 'transparent'};
   color: ${(propStyle) =>
     propStyle.ativo
       ? (props) => props.theme.corTerciaria
@@ -70,7 +70,7 @@ export const BotaoPagina = styled(Link)<propStyle>`
 
 export const BotaoTema = styled.button<propStyle>`
   background-color: ${(propStyle) =>
-    propStyle.ativo ? (props) => props.theme.corPrincipal : "transparent"};
+    propStyle.ativo ? (props) => props.theme.corPrincipal : 'transparent'};
   color: ${(propStyle) =>
     propStyle.ativo
       ? (props) => props.theme.corTerciaria

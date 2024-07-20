@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Container } from "../../styles/global"
+import styled from 'styled-components'
+import { breakpoints, Container } from '../../styles/global'
 
 export const ContainerGeral = styled(Container)`
   height: calc(100vh - 93px);
@@ -7,7 +7,14 @@ export const ContainerGeral = styled(Container)`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 767px) {
+  @media (width < ${breakpoints.desktop}) {
+    justify-content: none;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (width < ${breakpoints.tablet}) {
     display: block;
     max-width: 80%;
     width: 100%;
@@ -28,7 +35,7 @@ export const ContainerCentro = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 767px) {
+  @media (width < ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
     flex-direction: column;
     align-items: center;
@@ -78,5 +85,14 @@ export const ContainerLinks = styled.div`
 
   a {
     color: ${(props) => props.theme.corSecundaria};
+    transition: none;
+
+    &:hover {
+      color: ${(props) => props.theme.corPrincipal};
+    }
+  }
+
+  @media (width < ${breakpoints.desktop}) {
+    margin-top: 16px;
   }
 `

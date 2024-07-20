@@ -1,6 +1,6 @@
-import * as S from "./styles"
-import { ReactTyped } from "react-typed"
-import profile from "../../midia/profile.webp"
+import * as S from './styles'
+import { ReactTyped } from 'react-typed'
+import profile from '../../midia/profile.webp'
 
 function Home() {
   return (
@@ -9,9 +9,9 @@ function Home() {
         <div>
           <S.Titulo>Olá, me chamo João Marcelo</S.Titulo>
           <S.Subtitulo>
-            Desenvolvedor{" "}
+            Desenvolvedor{' '}
             <ReactTyped
-              strings={["Fullstack", "Frontend", "Backend"]}
+              strings={['Fullstack', 'Frontend', 'Backend']}
               typeSpeed={60}
               backSpeed={80}
               backDelay={1500}
@@ -19,12 +19,12 @@ function Home() {
             />
           </S.Subtitulo>
           <S.Paragrafo>
-            {" "}
+            {' '}
             Sou um Desenvolvedor Full Stack em formação pela EBAC e graduando em
             Ciência da Computação. Com habilidades em HTML, CSS, JavaScript e
             Python, tenho experiência tanto no front-end quanto no back-end.
-            back-end. Estou sempre em busca de novos desafios para aprimorar
-            minhas habilidades e conhecimentos.
+            Estou sempre em busca de novos desafios para aprimorar minhas
+            habilidades e conhecimentos.
           </S.Paragrafo>
         </div>
         <div>

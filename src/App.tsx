@@ -1,50 +1,38 @@
-import { useEffect, useState } from "react"
-import {
-  createBrowserRouter,
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom"
-import { EstiloGlobal, Container } from "./styles/global"
-import { ThemeProvider } from "styled-components"
-import temaLight from "./themes/light"
-import temaDark from "./themes/dark"
-import Home from "./pages/Home"
-import Sobre from "./pages/Sobre"
-import Projetos from "./pages/Projetos"
-import Cabecalho from "./containers/Cabecalho"
+import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+import temaDark from './themes/dark'
+import temaLight from './themes/light'
+import Home from './pages/Home'
+import Sobre from './pages/Sobre'
+import Projetos from './pages/Projetos'
+import Cabecalho from './containers/Cabecalho'
+
+import { EstiloGlobal } from './styles/global'
 
 function App() {
   const [trocaTema, setTrocaTema] = useState(() => {
-    const temaSalvo = localStorage.getItem("tema")
+    const temaSalvo = localStorage.getItem('tema')
     return temaSalvo ? JSON.parse(temaSalvo) : true
   })
-
-  const rotas = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />
-    },
-    {
-      path: "/sobre",
-      element: <Sobre />
-    },
-    {
-      path: "/projetos",
-      element: <Projetos />
-    }
-  ])
 
   function funcTrocaTema() {
     setTrocaTema((prevTema: unknown) => {
       const novoTema = !prevTema
-      localStorage.setItem("tema", JSON.stringify(novoTema))
+      localStorage.setItem('tema', JSON.stringify(novoTema))
       return novoTema
     })
   }
 
   useEffect(() => {
-    const temaSalvo = localStorage.getItem("tema")
+    AOS.init()
+  }, [])
+
+  useEffect(() => {
+    const temaSalvo = localStorage.getItem('tema')
     if (temaSalvo) {
       setTrocaTema(JSON.parse(temaSalvo))
     }
