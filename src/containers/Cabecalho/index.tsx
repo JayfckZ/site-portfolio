@@ -1,7 +1,6 @@
-import * as S from "./styles"
-import { Container } from "../../styles/global"
-import { useLocation } from "react-router-dom"
-import { useState } from "react"
+import * as S from './styles'
+import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
 
 type Props = {
   trocaTema: () => void
@@ -10,14 +9,14 @@ type Props = {
 function Cabecalho({ trocaTema, tema }: Props) {
   const location = useLocation()
 
-  let tituloPagina = "Portfólio"
+  let tituloPagina = 'Portfólio'
 
   const [botaoAtivo, setBotaoAtivo] = useState<string>(location.pathname)
 
-  if (location.pathname == "/") {
-    tituloPagina = "Portfólio"
+  if (location.pathname == '/') {
+    tituloPagina = 'Portfólio'
   } else {
-    tituloPagina = "João"
+    tituloPagina = 'João'
   }
 
   const atualizaBotao = (path: string) => {
@@ -30,22 +29,22 @@ function Cabecalho({ trocaTema, tema }: Props) {
         <S.Titulo>{tituloPagina}</S.Titulo>
         <nav>
           <S.BotaoPagina
-            onClick={() => atualizaBotao("/")}
-            ativo={botaoAtivo === "/"}
+            onClick={() => atualizaBotao('/')}
+            ativo={botaoAtivo === '/'}
             to="/"
           >
             Início
           </S.BotaoPagina>
           <S.BotaoPagina
-            onClick={() => atualizaBotao("/sobre")}
-            ativo={botaoAtivo === "/sobre"}
+            onClick={() => atualizaBotao('/sobre')}
+            ativo={botaoAtivo === '/sobre'}
             to="/sobre"
           >
             Sobre
           </S.BotaoPagina>
           <S.BotaoPagina
-            onClick={() => atualizaBotao("/projetos")}
-            ativo={botaoAtivo === "/projetos"}
+            onClick={() => atualizaBotao('/projetos')}
+            ativo={botaoAtivo === '/projetos'}
             to="/projetos"
           >
             Projetos
