@@ -74,15 +74,13 @@ export const Sessao = styled.section<Props>`
     justify-content: space-between;
 
     @media (width < ${breakpoints.tablet}) {
-      position: relative;
+      flex-direction: column-reverse;
       justify-content: center;
-      padding-bottom: 220px;
+      position: relative;
       z-index: 1;
 
       .texto {
-        position: absolute;
         text-align: center;
-        margin-top: 400px;
       }
     }
   }
@@ -119,6 +117,12 @@ export const Sessao = styled.section<Props>`
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
       content: '';
+    }
+
+    &.invert {
+      ${Container} {
+        flex-direction: column-reverse;
+      }
     }
   }
 `
