@@ -242,9 +242,7 @@ function Sobre() {
           <div className="texto">
             <S.TituloSec>PostgreSQL</S.TituloSec>
             <S.Paragrafo>
-              Desenvolvimento de backend robusto e escalável, com conhecimento
-              em frameworks como Django para construção de aplicações web
-              seguras e eficientes.
+              Manipulação e consulta de bases de dados relacionais.
             </S.Paragrafo>
           </div>
           <img src={postgre} alt="PostgreSQL logo" width="200px" />
