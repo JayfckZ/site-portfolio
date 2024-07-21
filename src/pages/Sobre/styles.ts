@@ -65,7 +65,8 @@ export const Sessao = styled.section<Props>`
   padding: 16px 0;
 
   ${TituloSec} {
-    color: ${(props) => props.language};
+    color: ${(props) =>
+      props.language == '#F7DF1E' ? '#F0DB4F' : props.language};
   }
 
   ${Container} {

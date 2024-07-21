@@ -2,7 +2,8 @@ const temaLight = {
   corPrincipal: '#007BFF',
   corSecundaria: '#4A4A4A',
   corTerciaria: '#fff',
-  corFundo: '#F5F5F5'
+  corFundo: '#F5F5F5',
+  corFundoCard: '#E0E0E0'
 }
 
 export default temaLight
