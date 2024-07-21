@@ -9,7 +9,7 @@ import temaLight from './themes/light'
 import Home from './pages/Home'
 import Sobre from './pages/Sobre'
 import Projetos from './pages/Projetos'
-import Cabecalho from './containers/Cabecalho'
+import Cabecalho from './components/Cabecalho'
 
 import { EstiloGlobal } from './styles/global'
 
