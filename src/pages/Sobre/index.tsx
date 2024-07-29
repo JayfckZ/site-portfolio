@@ -1,30 +1,21 @@
-import { Container, languageColors } from '../../styles/global'
+import {
+  Container,
+  html,
+  javascript,
+  typescript,
+  bootstrap,
+  gulp,
+  cypress,
+  jquery,
+  react,
+  vue,
+  python,
+  django,
+  docker,
+  postgre,
+  languageColors
+} from '../../styles/global'
 import * as S from './styles'
-
-const python =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
-const html =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
-const javascript =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
-const typescript =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
-const bootstrap =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg'
-const gulp =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gulp/gulp-plain.svg'
-const cypress =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg'
-const jquery =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg'
-const react =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
-const vue =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg'
-const django =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg'
-const postgre =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'
 
 function Sobre() {
   return (
@@ -229,15 +220,27 @@ function Sobre() {
           <img src={django} alt="Django logo" width="200px" />
         </Container>
       </S.Sessao>
+      <S.Sessao
+        data-aos="fade-left"
+        language={languageColors.docker}
+        className="invert"
+      >
+        <Container>
+          <div className="texto">
+            <S.TituloSec>Docker</S.TituloSec>
+            <S.Paragrafo>
+              Containerização de aplicações para garantir consistência e
+              portabilidade.
+            </S.Paragrafo>
+          </div>
+          <img src={docker} alt="Docker logo" width="200px" />
+        </Container>
+      </S.Sessao>
 
       <Container>
         <S.Subtitulo>Banco de Dados</S.Subtitulo>
       </Container>
-      <S.Sessao
-        data-aos="fade-left"
-        language={languageColors.postgre2}
-        className="invert"
-      >
+      <S.Sessao data-aos="fade-right" language={languageColors.postgre2}>
         <Container>
           <div className="texto">
             <S.TituloSec>PostgreSQL</S.TituloSec>
