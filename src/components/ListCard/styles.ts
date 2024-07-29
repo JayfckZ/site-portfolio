@@ -9,5 +9,6 @@ export const GridContainer = styled.div`
 
   @media (width <= ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 `

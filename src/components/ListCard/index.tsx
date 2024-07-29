@@ -15,6 +15,7 @@ const ListCard = ({ projetos }: Props) => {
             key={projeto.titulo}
             capa={projeto.capa}
             titulo={projeto.titulo}
+            techs={projeto.techs}
             descricao={projeto.descricao}
             gitLink={projeto.gitLink}
             deployLink={projeto.deployLink}
