@@ -20,6 +20,7 @@ import {
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
+import quack from '../../midia/quack.jpeg'
 import eplay from '../../midia/eplay.png'
 import efood from '../../midia/efood.png'
 import todoreact from '../../midia/to-do-react.png'
@@ -34,6 +35,15 @@ import calcmedias from '../../midia/calcmedias.png'
 import gamehub from '../../midia/gamehub.png'
 
 const projetos = [
+  {
+    capa: quack,
+    titulo: 'Quack',
+    techs: [python, django, html, css, javascript, bootstrap, docker, postgre],
+    descricao:
+      'Quack é uma plataforma de microblogging inspirada no Twitter, onde os usuários, chamados Quackers, compartilham atualizações rápidas em Quacks. Desenvolvida com Django, Docker, PostgreSQL e Bootstrap, a aplicação oferece uma experiência de usuário simplificada e personalizada, com uma interface moderna e responsiva.',
+    gitLink: 'https://github.com/JayfckZ/quack',
+    deployLink: 'https://quack-production-b68f.up.railway.app/'
+  },
   {
     capa: eplay,
     titulo: 'EPLAY',
