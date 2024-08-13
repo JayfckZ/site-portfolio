@@ -21,6 +21,17 @@ export const Header = styled.div`
 
   z-index: 2;
 
+  #layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 5%;
+    height: 71px;
+    border-radius: 0 0 16px 16px;
+  }
+
   #container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,6 +41,7 @@ export const Header = styled.div`
       align-items: center;
       justify-content: end;
       gap: 8px;
+      z-index: 1;
     }
 
     @media (width < ${breakpoints.tablet}) {
@@ -43,6 +55,7 @@ export const Header = styled.div`
 export const Titulo = styled.h1`
   width: auto;
   color: ${(props) => props.theme.corPrincipal};
+  z-index: 1;
 
   @media (width < ${breakpoints.tablet}) {
     display: none;

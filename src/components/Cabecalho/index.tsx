@@ -25,6 +25,7 @@ function Cabecalho({ trocaTema, tema }: Props) {
 
   return (
     <S.Header>
+      <div id="layer"></div>
       <S.ContainerHeader id="container">
         <S.Titulo>{tituloPagina}</S.Titulo>
         <nav>

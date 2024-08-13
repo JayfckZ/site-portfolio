@@ -27,7 +27,7 @@ const Card = ({
           <div />
         </Link>
         <Link target="_blank" href={deployLink}>
-          <i className="bi bi-triangle"></i>
+          <i className="bi bi-globe-americas"></i>
           Ver projeto
           <div />
         </Link>
