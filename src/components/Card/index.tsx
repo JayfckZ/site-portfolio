@@ -27,7 +27,7 @@ const Card = ({
           <div />
         </Link>
         <Link
-          as="button"
+          as={!deployLink ? 'button' : 'a'}
           target="_blank"
           href={deployLink}
           disabled={!deployLink}
