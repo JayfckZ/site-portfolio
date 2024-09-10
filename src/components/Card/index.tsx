@@ -26,9 +26,14 @@ const Card = ({
           Ver repositório
           <div />
         </Link>
-        <Link target="_blank" href={deployLink}>
+        <Link
+          as="button"
+          target="_blank"
+          href={deployLink}
+          disabled={!deployLink}
+        >
           <i className="bi bi-globe-americas"></i>
-          Ver projeto
+          {deployLink ? 'Ver projeto' : <small>Deploy indisponível</small>}
           <div />
         </Link>
       </div>

@@ -55,10 +55,15 @@ export const Link = styled.a`
   background-color: ${(props) => props.theme.corBotaoCard};
   color: ${(props) => props.theme.corFundo};
   display: flex;
-  align-itens: center;
+  align-items: center;
   justify-content: space-between;
 
   i {
     margin-left: 4px;
+  }
+
+  &:disabled {
+    filter: brightness(50%);
+    cursor: default;
   }
 `
