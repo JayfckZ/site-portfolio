@@ -20,6 +20,7 @@ import {
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
+import product_list_cart from '../../midia/product-list-cart.jpeg'
 import taskflow from '../../midia/taskflow.jpeg'
 import quack from '../../midia/quack.jpeg'
 import eplay from '../../midia/eplay.png'
@@ -36,6 +37,15 @@ import calcmedias from '../../midia/calcmedias.png'
 import gamehub from '../../midia/gamehub.png'
 
 const projetos: Projeto[] = [
+  {
+    capa: product_list_cart,
+    titulo: 'Lista de produtos com carrinho',
+    techs: [html, css, javascript],
+    descricao:
+      'Este site foi desenvolvido para gerenciar uma lista de produtos com uma funcionalidade completa de carrinho de compras, utilizando HTML, CSS e JavaScript.',
+    gitLink: 'https://github.com/JayfckZ/product-list-with-cart',
+    deployLink: 'https://product-list-with-cart-puce.vercel.app'
+  },
   {
     capa: taskflow,
     titulo: 'TaskFlow',
