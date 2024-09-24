@@ -5,4 +5,5 @@ declare type Projeto = {
   descricao: string
   gitLink: string
   deployLink?: string
+  type: string
 }
