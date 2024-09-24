@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   html,
   css,
@@ -15,8 +16,11 @@ import {
   python,
   django,
   docker,
-  postgre
+  postgre,
+  Container
 } from '../../styles/global'
+
+import { Button, FilterContainer } from './styles'
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
@@ -189,7 +193,39 @@ const projetos: Projeto[] = [
 ]
 
 function Projetos() {
-  return <ListCard projetos={projetos} />
+  const [filtro, setFiltro] = useState('todos')
+
+  const projetosFiltrados = projetos.filter((projeto) => {
+    if (filtro == 'todos') return true
+    if (filtro == 'front')
+      return projeto.type == 'front' || projeto.type == 'full'
+    if (filtro == 'back')
+      return projeto.type == 'back' || projeto.type == 'full'
+  })
+
+  return (
+    <Container>
+      <FilterContainer>
+        <h2>Filtre os projetos:</h2>
+        <Button
+          isSelected={filtro == 'todos'}
+          onClick={() => setFiltro('todos')}
+        >
+          Todos
+        </Button>
+        <Button
+          isSelected={filtro == 'front'}
+          onClick={() => setFiltro('front')}
+        >
+          Frontend
+        </Button>
+        <Button isSelected={filtro == 'back'} onClick={() => setFiltro('back')}>
+          Backend
+        </Button>
+      </FilterContainer>
+      <ListCard projetos={projetosFiltrados} />
+    </Container>
+  )
 }
 
 export default Projetos

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { breakpoints } from '../../styles/global'
 
 export const GridContainer = styled.div`
-  padding: 64px 0;
+  padding: 32px 0 64px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
