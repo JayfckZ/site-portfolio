@@ -7,7 +7,7 @@ const Card = ({
   descricao,
   gitLink,
   deployLink
-}: Projeto) => {
+}: Omit<Projeto, 'type'>) => {
   return (
     <CardContainer>
       <div>
