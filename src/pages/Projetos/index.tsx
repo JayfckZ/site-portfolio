@@ -24,6 +24,10 @@ import { Button, FilterContainer } from './styles'
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
+import python_project from '../../midia/python-project.png'
+import java_project from '../../midia/java-project.png'
+import javascript_project from '../../midia/javascript-project.png'
+import typescript_project from '../../midia/typescript-project.png'
 import product_list_cart from '../../midia/product-list-cart.jpeg'
 import taskflow from '../../midia/taskflow.jpeg'
 import quack from '../../midia/quack.jpeg'
@@ -42,14 +46,13 @@ import gamehub from '../../midia/gamehub.png'
 
 const projetos: Projeto[] = [
   {
-    capa: product_list_cart,
-    titulo: 'Lista de produtos com carrinho',
-    techs: [html, css, javascript],
+    capa: python_project,
+    titulo: 'Banco em Python',
+    techs: [python],
     descricao:
-      'Este site foi desenvolvido para gerenciar uma lista de produtos com uma funcionalidade completa de carrinho de compras, utilizando HTML, CSS e JavaScript.',
-    gitLink: 'https://github.com/JayfckZ/product-list-with-cart',
-    deployLink: 'https://product-list-with-cart-puce.vercel.app',
-    type: 'front'
+      'Uma aplicação em Python que simula operações bancárias como depósitos, saques e transferências entre usuários. Os dados das contas são armazenados em um arquivo CSV, garantindo que o saldo e as transações sejam mantidos entre as execuções do programa.',
+    gitLink: 'https://github.com/JayfckZ/conta_bancaria_python',
+    type: 'back'
   },
   {
     capa: taskflow,
@@ -118,6 +121,16 @@ const projetos: Projeto[] = [
       'Este projeto consiste em uma página inicial inspirada no Disney+, onde os visitantes podem explorar os diferentes planos disponíveis e obter informações sobre como assinar o serviço. Utilizando HTML, CSS, JavaScript e Gulp, desenvolvi uma interface amigável e visualmente atraente, que reflete a magia e a diversão associadas à marca Disney. A página inicial apresenta uma prévia do conteúdo oferecido pelo serviço, juntamente com detalhes sobre os planos de assinatura, permitindo aos usuários tomar decisões informadas sobre o que melhor se adequa às suas necessidades de entretenimento. Além disso, o design responsivo garante uma experiência de navegação perfeita em dispositivos de diferentes tamanhos, proporcionando acessibilidade a um público amplo.',
     gitLink: 'https://github.com/JayfckZ/clone_disneyplus',
     deployLink: 'https://clone-disneyplus-gamma-three.vercel.app/',
+    type: 'front'
+  },
+  {
+    capa: product_list_cart,
+    titulo: 'Lista de produtos com carrinho',
+    techs: [html, css, javascript],
+    descricao:
+      'Este site foi desenvolvido para gerenciar uma lista de produtos com uma funcionalidade completa de carrinho de compras, utilizando HTML, CSS e JavaScript.',
+    gitLink: 'https://github.com/JayfckZ/product-list-with-cart',
+    deployLink: 'https://product-list-with-cart-puce.vercel.app',
     type: 'front'
   },
   {
