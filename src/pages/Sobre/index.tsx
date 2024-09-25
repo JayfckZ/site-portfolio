@@ -11,6 +11,7 @@ import {
   vue,
   python,
   django,
+  java,
   docker,
   postgre,
   languageColors
@@ -18,6 +19,8 @@ import {
 import * as S from './styles'
 
 function Sobre() {
+  const curriculo = '/CVJoao2024.pdf'
+
   return (
     <S.ContainerGeral>
       <Container>
@@ -42,6 +45,14 @@ function Sobre() {
           No backend, desenvolvo aplicações robustas e escaláveis com Python e
           Django. Gosto de implementar soluções eficientes e seguras que atendam
           às necessidades dos usuários e aos requisitos dos projetos.
+        </S.Paragrafo>
+        <S.Titulo>Currículo</S.Titulo>
+        <S.Paragrafo>
+          Acesse e baixe meu currículo{' '}
+          <a href={curriculo} target="_blank" rel="noopener noreferrer">
+            aqui
+          </a>
+          .
         </S.Paragrafo>
         <S.Titulo>Habilidades Técnicas</S.Titulo>
         <S.Subtitulo>Frontend</S.Subtitulo>
@@ -222,9 +233,23 @@ function Sobre() {
       </S.Sessao>
       <S.Sessao
         data-aos="fade-left"
-        language={languageColors.docker}
+        language={languageColors.java}
         className="invert"
       >
+        <Container>
+          <div className="texto">
+            <S.TituloSec>Java</S.TituloSec>
+            <S.Paragrafo>
+              Conhecimento básico de Java, com foco nos fundamentos de
+              programação orientada a objetos, estrutura de dados e
+              desenvolvimento de aplicações simples.
+            </S.Paragrafo>
+          </div>
+          <img src={java} alt="Java logo" width="200px" />
+        </Container>
+      </S.Sessao>
+
+      <S.Sessao data-aos="fade-right" language={languageColors.docker}>
         <Container>
           <div className="texto">
             <S.TituloSec>Docker</S.TituloSec>
@@ -240,7 +265,11 @@ function Sobre() {
       <Container>
         <S.Subtitulo>Banco de Dados</S.Subtitulo>
       </Container>
-      <S.Sessao data-aos="fade-right" language={languageColors.postgre2}>
+      <S.Sessao
+        data-aos="fade-left"
+        language={languageColors.postgre2}
+        className="invert"
+      >
         <Container>
           <div className="texto">
             <S.TituloSec>PostgreSQL</S.TituloSec>

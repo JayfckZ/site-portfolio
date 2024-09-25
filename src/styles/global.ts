@@ -30,6 +30,8 @@ export const vue =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg'
 export const django =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg'
+export const java =
+  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'
 export const docker =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'
 export const postgre =
@@ -53,6 +55,7 @@ export const languageColors = {
   python: '#4CAF50',
   django: '#092E20',
   django2: '#00C853',
+  java: '#D50032',
   docker: '#2496ED',
   postgre: '#003B5C',
   postgre2: '#007AB8'
