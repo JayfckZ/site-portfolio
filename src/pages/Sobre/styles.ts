@@ -37,13 +37,13 @@ export const Paragrafo = styled.p`
   font-size: 16px;
   color: ${(props) => props.theme.corSecundaria};
 
+  a {
+    color: ${(props) => props.theme.corSecundaria};
+  }
+
   li {
     display: flex;
     gap: 8px;
-
-    a {
-      color: ${(props) => props.theme.corSecundaria};
-    }
 
     @media (width < ${breakpoints.tablet}) {
       span {
