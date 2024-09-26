@@ -15,6 +15,7 @@ import {
   vue,
   python,
   django,
+  flask,
   docker,
   postgre,
   Container
@@ -48,7 +49,7 @@ const projetos: Projeto[] = [
   {
     capa: python_project,
     titulo: 'Previsão do Tempo com Python e API',
-    techs: [python],
+    techs: [python, flask],
     descricao:
       'Este projeto é uma aplicação simples, desenvolvida em Python utilizando o framework Flask, que permite aos usuários consultar a previsão do tempo em tempo real para qualquer cidade, consumindo a API da OpenWeather. Com uma interface amigável, o projeto oferece uma experiência agradável e responsiva para os usuários.',
     gitLink: 'https://github.com/JayfckZ/previsao_tempo_python',
