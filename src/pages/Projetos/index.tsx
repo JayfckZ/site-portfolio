@@ -47,6 +47,15 @@ import gamehub from '../../midia/gamehub.png'
 const projetos: Projeto[] = [
   {
     capa: python_project,
+    titulo: 'Previsão do Tempo com Python e API',
+    techs: [python],
+    descricao:
+      'Este projeto é uma aplicação simples, desenvolvida em Python utilizando o framework Flask, que permite aos usuários consultar a previsão do tempo em tempo real para qualquer cidade, consumindo a API da OpenWeather. Com uma interface amigável, o projeto oferece uma experiência agradável e responsiva para os usuários.',
+    gitLink: 'https://github.com/JayfckZ/previsao_tempo_python',
+    type: 'back'
+  },
+  {
+    capa: python_project,
     titulo: 'Banco em Python',
     techs: [python],
     descricao:
