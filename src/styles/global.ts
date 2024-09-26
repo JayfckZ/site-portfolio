@@ -30,6 +30,8 @@ export const vue =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg'
 export const django =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg'
+export const flask =
+  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg'
 export const java =
   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'
 export const docker =
