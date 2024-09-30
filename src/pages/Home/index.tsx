@@ -20,7 +20,7 @@ function Home() {
           </S.Subtitulo>
           <S.Paragrafo>
             {' '}
-            Sou um Desenvolvedor Full Stack em formação pela EBAC e graduando em
+            Sou um Desenvolvedor Full Stack formado pela EBAC e graduando em
             Ciência da Computação. Com habilidades em HTML, CSS, JavaScript e
             Python, tenho experiência tanto no front-end quanto no back-end.
             Estou sempre em busca de novos desafios para aprimorar minhas
