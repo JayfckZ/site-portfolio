@@ -25,10 +25,11 @@ import { Button, FilterContainer } from './styles'
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
+import coffee_listing from '../../midia/coffee-listing.jpeg'
 import python_project from '../../midia/python-project.png'
-import java_project from '../../midia/java-project.png'
-import javascript_project from '../../midia/javascript-project.png'
-import typescript_project from '../../midia/typescript-project.png'
+// import java_project from '../../midia/java-project.png'
+// import javascript_project from '../../midia/javascript-project.png'
+// import typescript_project from '../../midia/typescript-project.png'
 import product_list_cart from '../../midia/product-list-cart.jpeg'
 import taskflow from '../../midia/taskflow.jpeg'
 import quack from '../../midia/quack.jpeg'
@@ -46,6 +47,16 @@ import calcmedias from '../../midia/calcmedias.png'
 import gamehub from '../../midia/gamehub.png'
 
 const projetos: Projeto[] = [
+  {
+    capa: coffee_listing,
+    titulo: 'Lista de Cafés',
+    techs: [html, css, typescript, react],
+    descricao:
+      'Este é um projeto de listagem de cafés, onde os usuários podem visualizar uma coleção de cafés de diferentes tipos. A interface foi desenvolvida em React e estilizada com styled-components, permitindo uma experiência de navegação fluida e dinâmica. Os dados dos produtos são carregados via fetch a partir de uma API externa, possibilitando a exibição dos cafés disponíveis e filtragem entre todos os produtos e os que estão disponíveis no momento.',
+    gitLink: 'https://github.com/JayfckZ/simple-coffee-listing',
+    deployLink: 'https://simple-coffee-listing-nine-mocha.vercel.app/',
+    type: 'front'
+  },
   {
     capa: python_project,
     titulo: 'Previsão do Tempo com Python e API',
