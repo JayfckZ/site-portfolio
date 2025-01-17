@@ -25,6 +25,7 @@ import { Button, FilterContainer } from './styles'
 
 import ListCard from '../../components/ListCard'
 // const img = 'https://placehold.it/200x100'
+import ruby_v2 from '../../midia/ruby_v2.png'
 import coffee_listing from '../../midia/coffee-listing.jpeg'
 import python_project from '../../midia/python-project.png'
 // import java_project from '../../midia/java-project.png'
@@ -47,6 +48,15 @@ import calcmedias from '../../midia/calcmedias.png'
 import gamehub from '../../midia/gamehub.png'
 
 const projetos: Projeto[] = [
+  {
+    capa: ruby_v2,
+    titulo: 'Ruby Motorsport V2 [EM DESENVOLVIMENTO]',
+    techs: [html, css, javascript, typescript, react, redux, router],
+    descricao:
+      'Ruby Motorsport V2 foi uma evolução significativa do projeto desenvolvido inicialmente na EBAC, desta vez utilizando React, React Router e integração com uma API. Na nova versão, o foco esteve na modernização do front-end, tornando o site mais dinâmico e eficiente. As funcionalidades incluem um carrossel de imagens com componentes reutilizáveis, animações aprimoradas, navegação fluida entre páginas com o React Router, além de botões interativos que atualizam informações automaticamente. A integração com a API permitiu exibir dados em tempo real, elevando a experiência do usuário.',
+    gitLink: 'https://github.com/JayfckZ/RubyMotorsportV2',
+    type: 'front'
+  },
   {
     capa: coffee_listing,
     titulo: 'Lista de Cafés',
@@ -196,7 +206,7 @@ const projetos: Projeto[] = [
   },
   {
     capa: ruby,
-    titulo: 'Ruby Motorsports',
+    titulo: 'Ruby Motorsport',
     techs: [html, css, jquery],
     descricao:
       'Ruby Motorsport foi um projeto da EBAC para pôr em prática as funcionalidades do jQuery. Utilizando carrossel de imagens, animações de página, botões interativos que mudam automaticamente a sessão de Contato, menu hambúrguer, máscaras e validação de formulário.',
