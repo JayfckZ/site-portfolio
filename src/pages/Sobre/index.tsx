@@ -19,7 +19,7 @@ import {
 import * as S from './styles'
 
 function Sobre() {
-  const curriculo = '/CVJoao2024.pdf'
+  const curriculo = '/CVJoao2025.pdf'
 
   return (
     <S.ContainerGeral>
@@ -32,7 +32,7 @@ function Sobre() {
           pela programação.
           <br />
           <br />
-          Atualmente, estou cursando o 4º período de Ciência da Computação, com
+          Atualmente, estou cursando o 5º período de Ciência da Computação, com
           ênfase no desenvolvimento Full Stack. Minha jornada acadêmica e
           prática me levou a uma admiração especial por Python e pelo
           desenvolvimento frontend. No frontend, tenho prazer em criar
